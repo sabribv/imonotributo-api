@@ -5,8 +5,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './modules/users/users.module';
 import { CoreModule } from './modules/core/core.module';
 import { ManagementModule } from './modules/management/management.module';
+import { SharedModule } from './modules/shared/shared.module';
 
-const modules = [CoreModule, ManagementModule, UsersModule];
+const modules = [CoreModule, ManagementModule, SharedModule, UsersModule];
 
 @Module({
   imports: [
