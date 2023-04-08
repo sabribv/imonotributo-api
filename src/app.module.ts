@@ -3,8 +3,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './modules/users/users.module';
+import { CoreModule } from './modules/core/core.module';
 
-const modules = [UsersModule];
+const modules = [CoreModule, UsersModule];
 
 @Module({
   imports: [
