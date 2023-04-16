@@ -6,8 +6,15 @@ import { UsersModule } from './modules/users/users.module';
 import { CoreModule } from './modules/core/core.module';
 import { ManagementModule } from './modules/management/management.module';
 import { SharedModule } from './modules/shared/shared.module';
+import { AuthenticationModule } from './modules/authentication/authentication.module';
 
-const modules = [CoreModule, ManagementModule, SharedModule, UsersModule];
+const modules = [
+  AuthenticationModule,
+  CoreModule,
+  ManagementModule,
+  SharedModule,
+  UsersModule,
+];
 
 @Module({
   imports: [

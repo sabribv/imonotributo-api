@@ -1,15 +1,16 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, SchemaTypes } from 'mongoose';
+import { Document, SchemaTypes, Types } from 'mongoose';
 import { Transaction, TransactionSchema } from './transaction.schema';
 import { Category, CategorySchema } from '../shared/category.schema';
+import { Tenant } from '../users/tenant.schema';
 
 @Schema()
 export class Persona extends Document {
   @Prop()
   id: number;
 
-  @Prop({ type: SchemaTypes.UUID, ref: 'Tenant' })
-  tenantId: string;
+  @Prop({ type: SchemaTypes.ObjectId, ref: Tenant.name })
+  tenantId: Types.ObjectId;
 
   @Prop()
   firstName: string;
