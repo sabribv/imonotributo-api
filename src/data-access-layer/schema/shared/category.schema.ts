@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, SchemaTypes } from 'mongoose';
+import {Document, SchemaTypes, Types} from 'mongoose';
 
 @Schema()
 export class Category extends Document {
-  @Prop({ type: SchemaTypes.UUID })
-  id: string;
+  @Prop()
+  name: string;
 
   @Prop()
   max: number;
