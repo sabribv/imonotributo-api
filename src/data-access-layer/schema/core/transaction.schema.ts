@@ -4,8 +4,8 @@ import { Tenant } from '../users/tenant.schema';
 
 @Schema()
 export class Transaction extends Document {
-  @Prop({ type: SchemaTypes.UUID })
-  id: string;
+  @Prop({ type: SchemaTypes.ObjectId })
+  _id: Types.ObjectId;
 
   @Prop({ type: SchemaTypes.ObjectId, ref: Tenant.name })
   tenantId: Types.ObjectId;

@@ -6,8 +6,8 @@ import { Tenant } from '../users/tenant.schema';
 
 @Schema()
 export class Persona extends Document {
-  @Prop()
-  id: number;
+  @Prop({ type: SchemaTypes.ObjectId })
+  _id: Types.ObjectId;
 
   @Prop({ type: SchemaTypes.ObjectId, ref: Tenant.name })
   tenantId: Types.ObjectId;
